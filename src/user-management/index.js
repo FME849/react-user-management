@@ -11,12 +11,7 @@ class Home extends Component {
     }
   }
 
-  _findIndex = id => {
-    const index = this.state.listUser.findIndex(user => {
-      return user.id === id;
-    });
-    return index;
-  }
+  _findIndex = id => this.state.listUser.findIndex(user => user.id === id);
 
   deleteUserFromList = (id) => {
     const index = this._findIndex(id);
@@ -26,6 +21,7 @@ class Home extends Component {
       listUser,
     });
   }
+
   render() {
     const { listUser } = this.state;
     return (

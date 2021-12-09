@@ -4,7 +4,7 @@ import UserItem from "./UserItem";
 class Users extends Component {
   renderListUser() {
     return this.props.listUser.map(user => {
-      return <UserItem user={user} deleteUserFunc={this.props.deleteUserFunc}/>
+      return <UserItem key={user.id} user={user} deleteUserFunc={this.props.deleteUserFunc}/>
     })
   }
   render() {
